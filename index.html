@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UI Color picker</title>
+    <meta name="description" content="Best material color and social color are here in hex, rgb and rgab format" /> <meta name="HandheldFriendly" content="true"/>
+    <meta name="keywords" content="ui color picker, material color, social color, ui color, material and social color, material color rgb, social color rgb">
+    <meta property="og:title" content="UI Color picker"/>
+    <meta property="og:site_name" content="UI Color"/>
+    <meta property="og:type" content="website">
+    <meta name="author" content="sonik sandip sarungale">
+    <meta name="title" content="UI Color picker" />
+    <link rel="icon" type="image/png" href="icon/ico.png">
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Lato" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style-min.css">
+</head>
+<body>
+    <div class="bodywrap">
+        <div class="header">
+            <div class="leftbox headerpart">
+                <a href="index.html">
+                    <h1 class="logo">
+                        <span>Ui</span>Color
+                    </h1>
+                </a>
+            </div>
+            <div class="midbox headerpart">
+                <!--button class="lookbtn">How It Will Look ?</button-->
+            </div>
+            <div class="rightbox headerpart">
+                Format : 
+                <div class="changeformat">
+                    <span class="currentformat"><span>HEX</span> &#9660;</span> 
+                    <div class="formatlist">
+                        <li class="hexformat" id="activeformat" onclick="toHex()">HEX</li>
+                        <li class="rgbformat" onclick="torgb()">RGB</li>
+                        <li class="rgbaformat" onclick="torgba()">RGBA</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="color-container">
+                <div class="color-wrap">
+                    <div class="material-color">
+                        <h2 class="color-header">
+                          Material color
+                        </h2>
+                        <div class="color">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="contain" style="background-color:#F44336">
+                                        <div class="colorbox">
+                                            <h3 class="colorname">#F44336</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="contain" style="background-color:#9C27B0">
+                                        <div class="colorbox">
+                                            <h3 class="colorname">#9C27B0</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="contain" style="background-color:#FF9800">
+                                        <div class="colorbox">
+                                            <h3 class="colorname">#FF9800</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="contain" style="background-color:#607D8B">
+                                        <div class="colorbox">
+
+                                            <div class="colorname">#607D8B</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="contain" style="background-color:#2196F3">
+                                        <div class="colorbox">
+                                            <h3 class="colorname">#2196F3</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="contain" style="background-color:#E91E63">
+                                        <div class="colorbox">
+                                            <h3 class="colorname">#E91E63</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="contain" style="background-color:#f1c40f">
+                                        <div class="colorbox">
+                                            <h3 class="colorname">#f1c40f</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="contain" style="background-color:#4CAF50">
+                                        <div class="colorbox">
+                                            <h3 class="colorname">#4CAF50</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="contain" style="background-color:#795548">
+                                        <div class="colorbox">
+                                            <h3 class="colorname">#795548</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-color">
+                      <h2 class="color-header">
+                          Social media color
+                      </h2>
+                       <div class="color">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="contain" style="background-color:#3b5998">
+                                        <div class="colorbox">
+                                        Facebook : 
+                                            <h3 class="colorname">#3b5998</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="contain" style="background-color:#55acee">
+                                        <div class="colorbox">
+                                        Twitter : 
+                                            <h3 class="colorname">#55acee</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="contain" style="background-color:#dd4b39">
+                                        <div class="colorbox">
+                                        Google+ : 
+                                            <h3 class="colorname">#dd4b39</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="contain" style="background-color:#ff0000">
+                                        <div class="colorbox">
+                                        YouTube : 
+                                            <h3 class="colorname">#ff0000</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="contain" style="background-color:#007bb5">
+                                        <div class="colorbox">
+                                        Linkedin : 
+                                            <h3 class="colorname">#007bb5</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="contain" style="background-color:#4dc247">
+                                        <div class="colorbox">
+                                        WhatsApp : 
+                                            <h3 class="colorname">#4dc247</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="contain" style="background-color:#e95950">
+                                        <div class="colorbox">
+                                        Instagram : 
+                                            <h3 class="colorname">#e95950</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="contain" style="background-color:#fffc00">
+                                        <div class="colorbox">
+                                        Snapchat : 
+                                            <h3 class="colorname">#fffc00</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="contain" style="background-color:#cb2027">
+                                        <div class="colorbox">
+                                        Pinterest : 
+                                            <h3 class="colorname">#cb2027</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="contain" style="background-color:#000000">
+                                        <div class="colorbox">
+                                        Github : 
+                                            <h3 class="colorname">#000000</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="contain" style="background-color:#ff4500">
+                                        <div class="colorbox">
+                                        Reddit : 
+                                            <h3 class="colorname">#ff4500</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="contain" style="background-color:#32506d">
+                                        <div class="colorbox">
+                                        Tumblr : 
+                                            <h3 class="colorname">#32506d</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="rgba-bar">
+                    <input type="range" orient="vertical" step="0.1" class="input-range" value="1" name="points" min="0.1" max="1" onchange="opacity(this.value)">
+                </div>
+            </div>
+            <div class="eg-container"></div>
+        </div>
+    </div>
+    
+    <div id="blur">
+        <div id="copycontain">
+            <span id="copied">
+                Copied : <span></span>
+            </span>
+        </div>
+    </div>
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

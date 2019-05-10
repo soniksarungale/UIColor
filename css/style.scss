@@ -1,0 +1,280 @@
+$header-color: #2196F3;
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lato', sans-serif;
+}
+h1,h2,h3,h4{
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    font-weight: 500;
+}
+.bodywrap{
+    .header{
+        height: 60px;
+        line-height: 60px;
+        padding: 0px 30px;
+        display: flex;
+        position: fixed;
+        width: 100%;
+        z-index: 20;
+        background-color: white;
+        top: 0;
+        margin-top: 0px;
+        border-bottom: 2px solid #e4e3e3;
+        .headerpart{
+            width: calc(100%/3); 
+        }
+        .logo{
+            font-size: 30px;
+            font-weight: 600;
+            color: #212121;
+            font-family: 'Baloo', cursive;
+            display: inline-block;
+            span{
+                color: #FF9800;
+            }
+        }
+        .midbox{
+            text-align: center;
+            .lookbtn{
+                border:  3px solid $header-color;
+                border-radius: 4px;
+                color: white;
+                background-color: $header-color;
+                font-size: 20px;
+                letter-spacing: 2px;
+                padding: 5px 15px;
+                cursor: pointer;
+                transition: all 0.5s ease;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+            .lookbtn:hover{
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            }
+        }
+        .rightbox{
+            font-size: 20px;
+            letter-spacing: 2px;
+            text-align: right;
+            font-weight: 600;
+            .changeformat{
+                display: inline-block;
+                position: relative;
+                .currentformat{
+                    padding: 5px 2px;
+                    border-bottom: 2px solid black;
+                    cursor: pointer;
+                    font-size: 18px;
+                    span{
+                        font-size: 20px;                
+                    }
+                }
+                .formatlist{
+                    display: none;
+                    position: absolute;
+                    z-index: 14;
+                    right: 0px;
+                    background-color: white;
+                    text-align: center;
+                    border-radius: 4px;
+                    margin-top: -2px;
+                    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+                    li{
+                        list-style: none;
+                        padding: 0px 30px;
+                        cursor: pointer;
+                        transition: 0.4s ease all;
+                    }
+                    #activeformat{
+                        background-color: #ecf0f1;
+                    }
+                    li:hover{
+                        background-color: #ecf0f1;
+                    }
+                }
+            }
+
+            .changeformat:hover .currentformat{
+                border-bottom-color: $header-color;
+            }
+        }
+    }
+    .container{
+        height: auto;
+        margin-top: 60px;
+        .color-container{
+            position: relative;
+            .material-color{
+                .colorname{
+                    border: 2px solid white;
+                    padding: 10px;
+                    border-radius: 4px;
+                }
+            }
+            .colorname{
+                font-size: 22px;
+                font-weight: 500;
+            }
+            .social-color{
+                .colorbox{
+                    border: 2px solid white;
+                    padding: 10px;
+                    border-radius: 4px;
+                    .colorname{
+                        display: inline-block;
+                    }
+                }
+            }
+            .color-header{
+                height: 70px;
+                line-height: 70px;
+                text-align: center;
+                color: #212121;
+                font-size: 30px;
+                letter-spacing: 2px;
+                display: block;
+            }
+            .row{
+                display: flex;
+                height: 150px;
+                .col{
+                    width: 100%;
+                    height: 100%;
+                    .contain{
+                        width: 100%;
+                        height: 100%;
+                        color: white;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 22px;
+                        cursor: pointer;
+                        z-index: 9;
+                        position: relative;
+                        transition: all 0.7s ease;    
+                    }
+                    .contain:hover{
+                        z-index: 10;
+                        box-shadow: 0 8px 20px 20px rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                    }
+                }
+            }
+            .rgba-bar{
+                display: none;
+                position: fixed;
+                z-index: 12;
+                right: 10px;
+                bottom: 10px;
+                background-color: white;
+                padding: 20px;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+                border-radius: 4px;
+                .input-range{
+                    -webkit-appearance: none;
+                    writing-mode: bt-lr; /* IE */
+                    -webkit-appearance: slider-vertical; /* WebKit */
+                }
+                input[type=range]{
+                    /* fix for FF unable to apply focus style bug  */
+                    border: 1px solid white; 
+
+                    /*required for proper track sizing in FF*/
+                    height: 300px;
+                }
+
+                input[type=range]::-moz-range-track {
+                    height: 300px;
+                    width: 5px;
+                    background: #ddd;
+                    border: none;
+                    border-radius: 3px;
+                }
+
+                input[type=range]::-moz-range-thumb {
+                    border: none;
+                    border-radius: 50%;
+                    background: $header-color;
+                }
+
+                /*hide the outline behind the border*/
+                input[type=range]:-moz-focusring{
+                    outline: 1px solid white;
+                    outline-offset: -1px;
+                }
+
+                input[type=range]:focus::-moz-range-track {
+                    background: #ccc;
+                }
+                input[type=range]::-ms-track {
+
+                    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+                    background: transparent;
+
+                    /*leave room for the larger thumb to overflow with a transparent border */
+                    border-color: transparent;
+                    border-width: 6px 0;
+
+                    /*remove default tick marks*/
+                    color: transparent;
+                }
+                input[type=range]::-ms-fill-lower {
+                    background: #777;
+                    border-radius: 10px;
+                }
+                input[type=range]::-ms-fill-upper {
+                    background: #ddd;
+                    border-radius: 10px;
+                }
+                input[type=range]::-ms-thumb {
+                    border: none;
+                    border-radius: 50%;
+                    background: $header-color;
+                }
+                input[type=range]:focus::-ms-fill-lower {
+                    background: #888;
+                }
+                input[type=range]:focus::-ms-fill-upper {
+                    background: #ccc;
+                }
+            }
+        }
+        .eg-container{
+            
+        }
+    } 
+}
+#blur{
+    position: fixed;
+    z-index: 99;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.5);
+    display: none;
+    #copycontain{
+        display: flex;
+        justify-content: center;
+        #copied{
+            background-color: #2c3e50;
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+            margin-top: 20px;
+            display: inline-block;
+            border-radius: 4px;
+            letter-spacing: 2px;
+            display: none;
+            position: fixed;
+        }
+    }
+
+}
